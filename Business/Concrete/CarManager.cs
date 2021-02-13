@@ -40,9 +40,9 @@ namespace Business.Concrete
             return _carDal.GetAll();
         }
 
-        public Car GetCarsByBrandId(int brandId)
+        public List<Car> GetCarsByBrandId(int brandId)
         {
-            return _carDal.Get(b => b.BrandId == brandId);
+            return _carDal.GetAll(b => b.BrandId == brandId);
         }
 
         public Car GetCarsByColorId(int colorId)
