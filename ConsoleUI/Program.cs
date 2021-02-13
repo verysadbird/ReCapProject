@@ -16,14 +16,25 @@ namespace ConsoleUI
 
             Car car1 = new Car();
             car1.BrandId = 1;
-            car1.ColorId = 2;
+            car1.ColorId = 1;
             car1.DailyPrice = 50;
             car1.Description = "Nissan";
-            car1.Id = 0;
+            car1.Id = 1;
             car1.ModelYear = 2017;
 
-            carManager.Add(car1);
-            
+
+            //carManager.Add(car1);
+            carManager.Delete(car1);
+
+            //EfColorDal colorDal = new EfColorDal();
+            //ColorManager colorManager = new ColorManager(colorDal);
+
+            //Color pink = new Color();
+            //pink.ColorId = 1;
+            //pink.ColorName = "Pink";
+
+            //colorManager.Delete(pink);
+
 
         }
     }

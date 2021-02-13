@@ -26,5 +26,18 @@ namespace Business.Concrete
         {
             return _colorDal.Get(c => c.ColorId == id);
         }
+
+        public void Add (Color color)
+        {
+            _colorDal.Add(color);
+            Console.WriteLine("Eklendi");
+        }
+
+        public void Delete(Color color)
+        {
+            _colorDal.Delete(color);
+            Console.WriteLine("Silindi");
+        }
+
     }
 }

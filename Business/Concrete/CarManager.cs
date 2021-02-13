@@ -18,7 +18,7 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            if(car.Description.Length >=2 && car.DailyPrice > 0)
+            if (car.Description.Length >= 2 && car.DailyPrice > 0)
             {
                 _carDal.Add(car);
                 Console.WriteLine("Araba başarıyla eklendi");
@@ -32,6 +32,7 @@ namespace Business.Concrete
         public void Delete(Car car)
         {
             _carDal.Delete(car);
+            Console.WriteLine("Araba silindi");
         }
 
         public List<Car> GetAll()
