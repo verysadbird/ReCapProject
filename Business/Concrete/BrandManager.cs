@@ -17,6 +17,17 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
+        public void Add(Brand brand)
+        {
+            _brandDal.Add(brand);
+            Console.WriteLine("Eklendi");
+        }
+
+        public void Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+            Console.WriteLine("Silindi");
+        }
 
         public List<Brand> GetAll()
         {
@@ -25,7 +36,14 @@ namespace Business.Concrete
 
         public Brand GetById(int brandId)
         {
-            return _brandDal.Get(b => b.BrandId == brandId);
+            var result = _brandDal.Get(b => b.BrandId == brandId);
+            return result;
+        }
+
+        public void Update(Brand brand)
+        {
+            _brandDal.Update(brand);
+            Console.WriteLine("Güncellendi");
         }
     }
 }

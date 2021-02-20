@@ -39,5 +39,10 @@ namespace Business.Concrete
             Console.WriteLine("Silindi");
         }
 
+        public void Update(Color color)
+        {
+            _colorDal.Update(color);
+            Console.WriteLine("Güncellendi");
+        }
     }
 }
